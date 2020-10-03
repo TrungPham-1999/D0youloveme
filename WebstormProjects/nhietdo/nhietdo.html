@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhietdo</title>
+</head>
+<body>
+<script>
+    let Temperature = function(c){
+        this.c = c;
+        if(c>=-273){
+            this.getF = function () {
+                return (c*1.8)+32;
+            }
+            this.getkenvin = function(){
+                return c+273.15;
+            }
+        }else{
+            alert("bạn đã nhập sai, yêu cầu bạn nhập lại");
+            let c = parseInt(prompt("nhập độ C muốn quy đổi"));
+        }
+    }
+    let c = parseInt(prompt("nhập độ C muốn quy đổi"));
+    let temperature = new Temperature(c);
+    let f = temperature.getF();
+    let kenvin = temperature.getkenvin();
+    alert(c+ 'độ C='+f+'độ F');
+    alert(c+'độ C='+kenvin+'độ kenvin');
+
+</script>
+</body>
+</html>
